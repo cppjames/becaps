@@ -29,7 +29,7 @@
 #define FuncDef(type, ret, func) \
     ret t_ ## type ## _ ## func (struct t_ ## type *self, struct t_ ## type ## _ ## func ## _params params)
 
-#define ref(obj) ({ typeof(obj) *self = &obj; self->funcs
+#define ref(obj) ({ typeof(obj) *self = &obj; (*self->funcs)
 
 #define init(...) FuncMacroDef(init, __VA_ARGS__)
 
