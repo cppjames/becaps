@@ -1,7 +1,7 @@
 #ifndef STREAM_H_
 #define STREAM_H_
 
-#include "macros.h"
+#include "funcs.h"
 #include <stdio.h>
 
 TypeDecl(Stream);

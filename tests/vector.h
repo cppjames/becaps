@@ -1,7 +1,7 @@
 #ifndef VECTOR_H_
 #define VECTOR_H_
 
-#include "macros.h"
+#include "funcs.h"
 
 TypeDecl(Vector2);
 #define Vector2(name) TypeConstruct(Vector2, name)
