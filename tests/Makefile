@@ -1,15 +1,16 @@
+TARGET := main
 CFLAGS := -c -I../
 
 .PHONY: all clean
 
-all: main
-	@./main
+all: $(TARGET)
+	@./$(TARGET)
 
-main: main.o vector.o stream.o
+$(TARGET): main.o vector.o stream.o
 	gcc $^ -o $@
 
 %.o: %.c
 	gcc $(CFLAGS) $< -o $@
 
 clean:
-	rm -rf *.o main
+	rm -rf *.o $(TARGET)
